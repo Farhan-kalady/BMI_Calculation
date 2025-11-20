@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #6a5af9, #ff6ec4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            width: 380px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            text-align: center;
+            animation: fadeIn 0.7s ease;
+        }
+
+        h2 {
+            margin: 0 0 20px;
+            font-size: 24px;
+            color: #6a5af9;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 8px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #6a5af9;
+            outline: none;
+            box-shadow: 0 0 6px rgba(106, 90, 249, 0.4);
+        }
+
+        button {
+            margin-top: 15px;
+            background: #6a5af9;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #5b4ce0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>BMI Calculator</h2>
+
+        <form method="POST">
+            <label>Weight (kg):</label><br>
+            <input type="number" step="0.1" name="weight" required><br><br>
+
+            <label>Height (meters):</label><br>
+            <input type="number" step="0.01" name="height" required><br><br>
+
+            <button type="submit">Calculate BMI</button>
+        </form>
+    </div>
+
+</body>
+</html>
