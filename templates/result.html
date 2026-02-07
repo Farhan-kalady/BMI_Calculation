@@ -85,9 +85,9 @@
 
         {% if bmi < 18.5 %}
             <p class="status under">You are Underweight</p>
-        {% elif bmi >= 18.5 and bmi < 24.9 %}
+        {% elif bmi < 25 %}
             <p class="status normal">You have Normal weight</p>
-        {% elif bmi >= 25 and bmi < 29.9 %}
+        {% elif bmi < 30 %}
             <p class="status over">You are Overweight</p>
         {% else %}
             <p class="status obese">Obese</p>
